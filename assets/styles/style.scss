@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'list';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'fira sana', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $dark;
+    color: #eee;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+
+

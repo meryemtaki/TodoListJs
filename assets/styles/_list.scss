@@ -1,0 +1,114 @@
+header{
+    padding: 2rem 1rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    h1{
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $gray;
+        margin-bottom: 1rem;
+    }
+
+    #new-form{
+        display:flex ;
+        #new-input{
+            flex: 1 1 0%;
+            padding: 1rem;
+            background-color: $darker;
+            margin-right: 1rem;
+            border-radius: 1.6rem;
+            color: $light;
+            font-size: 1rem;
+            &::placeholder{
+                color: $gray;
+
+            }
+            
+        }
+        #new-sub{
+            color: $pink;
+            font-size: 1rem;
+            font-weight: 700;
+            background-image: linear-gradient(to left,$pink,$purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            transition: 0.4s;
+            &:hover{
+                opacity: 0.6;
+            }
+            &:active{
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    .list-tasks{
+        padding: 1rem;
+        h2{
+            font-size: 1.5rem;
+            font-weight: 200;
+            color: $gray;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        #tasks{
+            .task{
+                display: flex;
+                justify-content: space-between;
+                background-color: $darkest;
+                padding: 1rem;
+                border-radius: 1.6rem;
+                margin-bottom: 1rem;
+                .content{
+                    flex: 1 1 0%;
+                    .text{
+                        color: #eee;
+                        font-size: 1.15rem;
+                        width: 100%;
+                        display: block;
+                        transition: 0.4s;
+                        &:not(:read-only){
+                            color: $pink;
+                        }
+                    }
+                }
+                .btn{
+                    display: flex;
+                    margin: 0 -0.5rem;
+                    button{
+                        cursor: pointer;
+                        margin: 0 0.5rem;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        transform: 0.3s;
+                        &:hover{
+                            opacity: 0.6;
+                        }
+                        &:active{
+                            opacity: 0.3;
+                        }
+                    }
+                    .edit{
+                        background-image: linear-gradient(to left,$pink,$purple);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    .delete{
+                        color: crimson;
+                    }
+                }
+            }
+        }
+    }
+}
